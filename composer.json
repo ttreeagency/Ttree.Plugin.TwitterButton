@@ -1,0 +1,15 @@
+{
+    "name": "ttree/plugin-twitterbutton",
+    "type": "typo3-flow-plugin",
+    "description": "A simple package to add twitter social buttons to your website",
+    "version": "0.1",
+	"license": "MIT",
+    "require": {
+        "typo3/flow": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Ttree\\Plugin\\TwitterButton": "Classes"
+        }
+    }
+}

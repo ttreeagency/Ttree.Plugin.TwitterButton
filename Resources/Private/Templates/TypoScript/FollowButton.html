@@ -1,0 +1,29 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<neos:contentElement node="{node}">
+	<div class="ttree-plugin-twitterbutton-share" style="margin-top: 10px;">
+	<f:if condition="{username}">
+		<f:then>
+			<a href="https://twitter.com/{username}"
+			   class="twitter-follow-button"
+			   data-show-count="false"
+			   {f:if(condition:showUsername, else:'data-show-screen-name="false"')}
+			   {f:if(condition:largeButton, then:'data-size="large"')}
+			   data-lang="en">
+				Follow <f:if condition="{showUsername}" then="@{username}"/>
+			</a>
+			<script>!function (d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+				if (!d.getElementById(id)) {
+					js = d.createElement(s);
+					js.id = id;
+					js.src = p + '://platform.twitter.com/widgets.js';
+					fjs.parentNode.insertBefore(js, fjs);
+				}
+			}(document, 'script', 'twitter-wjs');</script>
+		</f:then>
+		<f:else>
+			Configure a Twiiter username on the Inspector, please ...
+		</f:else>
+	</f:if>
+	</div>
+</neos:contentElement>

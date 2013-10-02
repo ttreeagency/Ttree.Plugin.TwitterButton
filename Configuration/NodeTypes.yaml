@@ -1,0 +1,51 @@
+'Ttree.Plugin.TwitterButton:Button':
+  abstract: TRUE
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    inspector:
+      groups:
+        main:
+          label: 'Twitter Account'
+        options:
+          label: 'Twitter Options'
+  properties:
+    largeButton:
+      type: boolean
+      ui:
+        reloadIfChanged: TRUE
+        label: 'Large button'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'options'
+    optOut:
+      type: boolean
+      ui:
+        reloadIfChanged: TRUE
+        label: 'Opt-out of tailoring Twitter'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'options'
+
+'Ttree.Plugin.TwitterButton:FollowButton':
+  superTypes:
+    - 'Ttree.Plugin.TwitterButton:Button'
+  ui:
+    label: 'Twitter Follow Button'
+  properties:
+    username:
+      type: string
+      ui:
+        reloadIfChanged: TRUE
+        label: 'User'
+        reloadIfChanged: true
+        inspector:
+          group: 'main'
+    showUsername:
+      type: boolean
+      ui:
+        reloadIfChanged: TRUE
+        label: 'Show username'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'main'
