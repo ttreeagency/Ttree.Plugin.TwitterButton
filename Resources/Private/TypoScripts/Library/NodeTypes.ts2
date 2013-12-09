@@ -1,5 +1,5 @@
 
-prototype(Ttree.Plugin.TwitterButton:FollowButton) < prototype(TYPO3.Neos:Template)
+prototype(Ttree.Plugin.TwitterButton:FollowButton) < prototype(TYPO3.Neos:Content)
 prototype(Ttree.Plugin.TwitterButton:FollowButton) {
 	templatePath = 'resource://Ttree.Plugin.TwitterButton/Private/Templates/TypoScript/FollowButton.html'
 	username = ${q(node).property('username')}
